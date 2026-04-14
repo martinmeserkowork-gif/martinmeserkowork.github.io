@@ -34,11 +34,11 @@ body{
 #cursor.big{width:44px;height:44px;background:transparent;border:1.5px solid var(--red)}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(245,242,236,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule);padding:0 56px;height:64px;display:flex;justify-content:space-between;align-items:center}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(245,242,236,0.50); backdrop-filter:blur(12px);border-bottom:0px solid var(--rule);padding:0 56px;height:64px;display:flex;justify-content:space-between;align-items:center}
 .nav-logo{font-family:'Anton',sans-serif;font-size:20px;letter-spacing:.06em;color:var(--ink);text-decoration:none}
 .nav-logo span{color:var(--red)}
 .nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a{font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--red)}
 .nav-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .nav-ham span{display:block;width:22px;height:1.5px;background:var(--ink);transition:.3s}
@@ -48,8 +48,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(245,242,236,
 .nav-overlay a:hover{color:var(--red)}
 
 /* HERO */
-#hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;z-index:1;padding-top:64px;border-bottom:2px solid var(--ink)}
-.hero-left{display:flex;flex-direction:column;justify-content:flex-end;padding:80px 56px;border-right:1px solid var(--rule)}
+#hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;z-index:1;padding-top:64px;border-bottom:0.5px solid var(--rule)}
+.hero-left{display:flex;flex-direction:column;justify-content:flex-end;padding:80px 56px;}
 .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--red);margin-bottom:20px}
 .hero-name{font-family:'Anton',sans-serif;font-size:clamp(80px,11vw,160px);line-height:.88;letter-spacing:.01em;color:var(--ink);text-transform:uppercase}
 .hero-name span{display:block;color:var(--red)}
@@ -57,11 +57,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(245,242,236,
 .hero-cta-row{margin-top:48px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
 .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);padding:14px 28px;font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:background .2s,gap .2s}
 .btn-primary:hover{background:var(--red);gap:16px}
-.btn-ghost{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color .2s,border-color .2s}
+.btn-ghost{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding-bottom:2px;transition:color .2s,border-color .2s}
 .btn-ghost:hover{color:var(--red);border-color:var(--red)}
-.hero-right{background:var(--paper2)}
+.hero-right{background:rgba(245,242,236,0.5);backdrop-filter:blur(2px);}
 .hero-stats{display:grid;grid-template-columns:1fr 1fr;height:100%}
-.stat-cell{padding:48px 40px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;flex-direction:column;justify-content:flex-end}
+.stat-cell{padding:48px 40px;display:flex;flex-direction:column;justify-content:flex-end}
 .stat-cell:nth-child(even){border-right:none}
 .stat-cell:nth-child(3),.stat-cell:nth-child(4){border-bottom:none}
 .stat-num{font-family:'Anton',sans-serif;font-size:clamp(60px,8vw,110px);line-height:.85;color:var(--ink)}
@@ -84,8 +84,8 @@ section{position:relative;z-index:1}
 /* ═══════════════════════════════════════════
    PROJECTS  — title bar ABOVE image, info BELOW
    ═══════════════════════════════════════════ */
-#projects{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
-.projects-header{padding:80px 56px 64px;border-bottom:1px solid var(--rule)}
+#projects{border-top:0px solid var(--ink);border-bottom:0px solid var(--ink)}
+.projects-header{padding:80px 56px 64px;border-bottom:0px solid var(--rule)}
 .projects-headline{font-family:'Anton',sans-serif;font-size:clamp(56px,8vw,120px);line-height:.88;text-transform:uppercase;letter-spacing:.01em;color:var(--ink)}
 .projects-headline span{color:var(--red)}
 
@@ -94,7 +94,7 @@ section{position:relative;z-index:1}
 /* ── TITLE BAR — sits ABOVE the image ── */
 .proj-title-bar{
   padding:28px 56px 24px;
-  background:var(--paper);
+  background:rgba(245,242,236,0.5);backdrop-filter:blur(1px);
   border-bottom:1px solid var(--rule);
   display:flex;
   justify-content:space-between;
@@ -188,7 +188,7 @@ section{position:relative;z-index:1}
 }
 .book-cell{
   flex:0 0 auto;
-  width:clamp(80px,12vw,140px);
+  width:clamp(140px,20vw,240px);
   cursor:pointer;
   transition:transform .25s,filter .25s;
   filter:brightness(.88);
@@ -203,8 +203,8 @@ section{position:relative;z-index:1}
 }
 .book-cell img{
   display:block;
-  width:100%;
-  aspect-ratio:2/3;
+  width:100%; 
+  height:100%;
   object-fit:cover;
   object-position:center top;
   box-shadow:3px 6px 18px rgba(0,0,0,.6);
@@ -222,7 +222,7 @@ section{position:relative;z-index:1}
 @media(max-width:600px){
   .book-row{padding:14px 16px 10px}
   .book-row-inner{gap:8px;justify-content:flex-start}
-  .book-cell{width:clamp(64px,18vw,100px)}
+  .book-cell{width:clamp(110px,26vw,170px)}
   .book-series-label{font-size:9px;margin-bottom:8px}
 }
 
@@ -257,7 +257,7 @@ section{position:relative;z-index:1}
 /* ── INFO STRIP — sits BELOW the image ── */
 .proj-info-bar{
   padding:36px 56px;
-  background:var(--paper);
+  background:rgba(245,242,236,0.5);backdrop-filter:blur(1px);
   border-top:1px solid var(--rule);
   display:flex;
   justify-content:space-between;
@@ -293,7 +293,7 @@ section{position:relative;z-index:1}
 .chip.hi{border-color:var(--red);color:var(--paper)}
 
 /* EXPERIENCE */
-#experience{padding:100px 56px;border-bottom:1px solid var(--rule);background:var(--paper2)}
+#experience{padding:100px 56px;border-bottom:1px solid var(--rule);background:rgba(245,242,236,0.5);backdrop-filter:blur(1px);}
 .exp-layout{display:grid;grid-template-columns:240px 1fr;gap:80px}
 .exp-sticky{position:sticky;top:80px;align-self:start}
 .exp-head{font-family:'Anton',sans-serif;font-size:72px;line-height:.88;text-transform:uppercase;color:var(--ink)}
@@ -1096,9 +1096,9 @@ Med letoma 2021 in 2026 sem sodeloval s <strong>študentskimi organizacijami</st
     <div class="section-tag" style="color:rgba(0,0,0,.35)">Pogovorimo se</div>
     <h2 class="contact-headline">Stopi v<br>stik.</h2>
     <div class="contact-details contact-details--big">
-      <a class="cd-item" href="/cdn-cgi/l/email-protection#4924283b3d202767242c3a2c3b2226673e263b22092e24282025672a2624">
+      <a class="cd-item" href="mailto:martin.meserko.work@gmail.com">
         <div class="cd-label">E-pošta</div>
-        <div class="cd-value"><span class="__cf_email__" data-cfemail="95f8f4e7e1fcfbbbf8f0e6f0e7fefabbe2fae7fed5f2f8f4fcf9bbf6faf8">[email&#160;protected]</span></div>
+        <div class="cd-value">martin.meserko.work@gmail.com</div>
       </a>
       <a class="cd-item" href="tel:+38669638711">
         <div class="cd-label">Telefon</div>
@@ -1108,7 +1108,7 @@ Med letoma 2021 in 2026 sem sodeloval s <strong>študentskimi organizacijami</st
         <div class="cd-label">Lokacija</div>
         <div class="cd-value">Ljubljana, Slovenija</div>
       </div>
-      <a class="cd-item" href="https://www.linkedin.com/in/martin-meserko" target="_blank" rel="noopener">
+      <a class="cd-item" href="https://www.linkedin.com/in/martin-meserko-65155b3aa/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BGun0aPSVR9uZ5qq0qawUng%3D%3D" target="_blank" rel="noopener">
         <div class="cd-label">LinkedIn</div>
         <div class="cd-value">martin-meserko</div>
       </a>
